@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <h1> Willkommen</h1>
+
+     {% for ausgebe in books %}
+    <table>
+      <tr>
+        <th>Titel</th>
+        <th>description</th>
+        <th>preis</th>
+          <th>datum</th>
+        <th>autor</th>
+        <th>status</th>
+        <th>completed</th>
+
+      </tr>
+      <tr>
+        <td>{{ausgebe.title}}</td>
+        <td>{{ausgebe.description}}</td>
+        <td>{{ausgebe.preis}}</td>
+        <td>{{ausgebe.datum}}</td>
+        <td>{{ausgebe.autor}}</td>
+        <td>{{ausgebe.status}}</td>
+        <td>{{ausgebe.completed}}</td>
+
+      </tr>
+    </table>
+
+    {% endfor %}
+
+
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+        background-color: rgb(31,181,207);
+        color: white;
+    }
+    </style>
+  </body>
+</html>
